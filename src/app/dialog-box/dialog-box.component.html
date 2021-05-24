@@ -1,0 +1,22 @@
+<div mat-dialog-content>
+  <table>
+            <tr><td width="10%">Poster</td><td><img src="{{movie.poster}}" height="200" alt="Poster" /></td></tr>
+            <tr><td>Title</td><td>{{movie.title}}</td></tr>
+            <tr><td>Listing Type</td><td>{{movie.listingType}}</td></tr>
+            <tr><td>ImDB Rating</td><td>{{movie.imdbRating}}</td></tr>
+            <tr><td>Language</td><td>{{movie.language}}</td></tr>
+            <tr><td>Location</td><td>{{movie.location}}</td></tr>
+            <tr><td>Sound Effects</td><td>{{movie.soundEffects}}</td></tr>
+            <tr><td>Plot</td><td>{{movie.plot}}</td></tr>
+            <tr><td colspan=2>
+                    <table>
+                        <tr><td>Stills</td></tr>
+                        <tr><td *ngFor="let s of movie.stills"><img src="{{s}}" height="100" /></td></tr>
+                    </table>
+                </td></tr>
+        </table>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+</div>
